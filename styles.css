@@ -1,62 +1,76 @@
-/* Reset all margins and paddings */
+/* General reset for margins, paddings, and box-sizing */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Set the height and background for the body */
+/* Full height of the page for the body */
 body {
   height: 100vh;
   display: flex;
-  margin: 0;
   background-color: #1e1e1e;
   font-family: 'Arial', sans-serif;
-  color: #fff;
+  color: white;
 }
 
-/* The main container for the two-column layout */
+/* Flex container for two-column layout */
 .container {
   display: flex;
   width: 100%;
   height: 100%;
 }
 
-/* Editor (left side) styling */
+/* Editor (left side) styles */
 .editor {
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  padding: 10px;
+  background-color: #2d2d2d;
 }
 
 textarea#codeEditor {
   width: 100%;
-  height: 100%;
+  height: 90%; /* Adjust height to allow space for the Run button */
   background-color: #2d2d2d;
-  color: #fff;
+  color: white;
   border: none;
   padding: 10px;
   font-size: 16px;
   font-family: 'Courier New', Courier, monospace;
-  outline: none;
   resize: none;
+  outline: none;
 }
 
-/* Output log (right side) styling */
+/* Styling the Run button */
+#runButton {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #3c3c3c;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#runButton:hover {
+  background-color: #555;
+}
+
+/* Output log (right side) styles */
 .output {
   flex: 1;
-  background-color: #1e1e1e;
-  border-left: 1px solid #444; /* Creates a divider between editor and output */
   padding: 20px;
-  overflow-y: auto;
+  background-color: #1e1e1e;
+  border-left: 1px solid #444;
 }
 
 #consoleOutput {
   background-color: #2d2d2d;
-  color: #fff;
+  color: white;
   padding: 10px;
-  height: calc(100% - 40px);  /* Subtract padding */
+  height: calc(100% - 40px);
   overflow-y: auto;
   white-space: pre-wrap;
   word-wrap: break-word;
