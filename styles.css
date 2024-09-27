@@ -1,79 +1,106 @@
-/* General reset for margins, paddings, and box-sizing */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Full height of the page for the body */
+/* Global Styles */
 body {
-  height: 100vh;
-  display: flex;
-  background-color: #1e1e1e;
-  font-family: 'Arial', sans-serif;
-  color: white;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
-/* Flex container for two-column layout */
-.container {
-  display: flex;
-  width: 100%;
-  height: 100%;
+/* IDE Container */
+.ide-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    color: white;
 }
 
-/* Editor (left side) styles */
-.editor {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  background-color: #2d2d2d;
+button#run-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
-textarea#codeEditor {
-  width: 100%;
-  height: 90%; /* Adjust height to allow space for the Run button */
-  background-color: #2d2d2d;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  font-family: 'Courier New', Courier, monospace;
-  resize: none;
-  outline: none;
+button#run-btn:hover {
+    background-color: #666;
 }
 
-/* Styling the Run button */
-#runButton {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #3c3c3c;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
+/* Editor & Line Numbers */
+.editor-container {
+    display: flex;
+    position: relative;
 }
 
-#runButton:hover {
-  background-color: #555;
+#editor {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 5px; /* Reduce padding to fit text with cursor better */
+    font-size: 14px; /* Reduce font size for better alignment */
+    font-family: monospace;
+    resize: none;
+    background-color: #1e1e1e;
+    color: white;
+    overflow: auto;
+    line-height: 1.3; /* Fine-tune line height to make the cursor fit */
+    caret-color: white; /* Set the cursor color */
 }
 
-/* Output log (right side) styles */
-.output {
-  flex: 1;
-  padding: 20px;
-  background-color: #1e1e1e;
-  border-left: 1px solid #444;
+#line-numbers {
+    background-color: #2e2e2e;
+    border: 1px solid #444;
+    border-right: none;
+    padding: 5px; /* Match padding with the editor */
+    font-family: monospace;
+    font-size: 14px; /* Match font size */
+    color: #888;
+    user-select: none;
+    text-align: right;
+    overflow: hidden;
+    line-height: 1.3; /* Match the editor's line height */
 }
 
-#consoleOutput {
-  background-color: #2d2d2d;
-  color: white;
-  padding: 10px;
-  height: calc(100% - 40px);
-  overflow-y: auto;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  font-family: 'Courier New', Courier, monospace;
+.output-container {
+    margin-top: 20px;
 }
 
+pre#output {
+    background-color: #1e1e1e;
+    color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    height: 150px;
+    overflow-y: scroll;
+    font-family: monospace;
+}
+
+/* Synchronizing scroll */
+.editor-container {
+    position: relative;
+    height: 200px;
+}
+
+#editor, #line-numbers {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#editor::-webkit-scrollbar {
+    width: 8px;
+}
+
+#editor::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 5px;
+}
