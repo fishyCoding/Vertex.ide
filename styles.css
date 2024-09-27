@@ -26,16 +26,13 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 20px; /* Add padding to create a buffer */
+  padding: 10px;
   background-color: #2d2d2d;
-  height: 100%; /* Ensure full height */
-  position: relative;
 }
 
 textarea#codeEditor {
-  width: calc(100% - 40px); /* Leave space for line numbers */
-  height: 90%; /* Keep this height */
-  margin-left: 40px; /* Align with line numbers */
+  width: 100%;
+  height: 90%; /* Adjust height to allow space for the Run button */
   background-color: #2d2d2d;
   color: white;
   border: none;
@@ -45,21 +42,6 @@ textarea#codeEditor {
   resize: none;
   outline: none;
 }
-.line-numbers {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 40px; /* Adjust width as needed */
-  background-color: #1e1e1e;
-  color: #999;
-  padding: 10px 0;
-  text-align: right; /* Right align the numbers */
-  font-family: 'Courier New', Courier, monospace;
-  height: 100%; /* Full height to match the textarea */
-  overflow-y: auto; /* Allow scrolling for line numbers */
-}
-
-
 
 /* Styling the Run button */
 #runButton {
@@ -94,3 +76,4 @@ textarea#codeEditor {
   word-wrap: break-word;
   font-family: 'Courier New', Courier, monospace;
 }
+
