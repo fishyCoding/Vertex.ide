@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex IDE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ide-container">
+        <h1>Vertex IDE</h1>
+        <div class="editor-container">
+            <div id="line-numbers"></div>
+
+            <textarea id="editor" placeholder="Write your Vertex code here..." spellcheck="false"></textarea>
+        </div>
+        <button id="run-btn">Run</button>
+        <div class="output-container">
+            <h2>Output:</h2>
+            <pre id="output"></pre>
+        </div>
+    </div>
+    <script src="translate.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>
