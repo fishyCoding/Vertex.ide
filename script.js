@@ -64,7 +64,7 @@ editor.addEventListener("input", updateLineNumbers)
 // Trigger line numbers update on page load
 updateLineNumbers()
 
-
+// The translate function to convert Vertex to JavaScript
 
 editor.addEventListener('keydown', function(event) {
     if (event.key === 'Tab') {
