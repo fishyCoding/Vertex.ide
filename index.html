@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vertex IDE</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertex IDE</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Left side (Textarea/Editor) -->
-    <div class="editor">
-      <textarea id="codeEditor" placeholder="Write your code here..."></textarea>
-      <!-- Run button to trigger code execution -->
-      <button id="runButton">Run</button>
+    <div id="container">
+        <div id="editor-container">
+            <div id="line-numbers"></div>
+            <textarea id="editor" spellcheck="false"></textarea>
+        </div>
+        <button id="run-btn">Run</button>
+        <pre id="output"></pre>
     </div>
 
-    <!-- Right side (Output Log) -->
-    <div class="output">
-      <h2>Output Log:</h2>
-      <div id="consoleOutput"></div>
-    </div>
-  </div>
+    <!-- Include the translator function -->
+    <script src="translate.js"></script>
 
-  <script src="translate.js"></script>
-  <script src="script.js"></script>
+    <!-- Include the main script -->
+    <script src="script.js"></script>
 </body>
 </html>
