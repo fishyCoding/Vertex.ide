@@ -93,6 +93,8 @@ function translate(input) {
     }
   } else if (parts[0]=="End"){
     return "}"
+  } else if (parts[0]=="Return"){
+    return "return "+parts[1]
   }else {
     return trimmedInput
   }
