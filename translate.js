@@ -91,8 +91,9 @@ function translate(input) {
     } else {
       return "function " + parts[2] + "() {"
     }
-  } else {
+  } else if (parts[0]=="End"){
+    return "}"
+  }else {
     return input
   }
 }
-
