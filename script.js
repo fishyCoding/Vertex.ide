@@ -79,7 +79,7 @@ editor.addEventListener('keydown', function(event) {
         this.value = this.value.substring(0, start) + tab + this.value.substring(end);
 
         // Move the caret
-        this.selectionStart = this.selectionEnd = start + 1;
+        this.selectionStart = this.selectionEnd = start + tab.length;
 
         // Update line numbers
         updateLineNumbers();
