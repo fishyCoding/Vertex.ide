@@ -95,3 +95,4 @@ function translate(input) {
     return input
   }
 }
+
