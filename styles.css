@@ -104,9 +104,3 @@ pre#output {
     background-color: #555;
     border-radius: 5px;
 }
-textarea {
-    tab-size: 2; /* or any number of spaces you prefer */
-    -moz-tab-size: 2; /* for Firefox support */
-    -o-tab-size: 2;   /* for older Opera support */
-  }
-  

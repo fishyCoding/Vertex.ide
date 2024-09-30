@@ -65,7 +65,7 @@ editor.addEventListener("input", updateLineNumbers)
 updateLineNumbers()
 
 // The translate function to convert Vertex to JavaScript
-
+const tab="  "
 
 editor.addEventListener('keydown', function(event) {
     if (event.key === 'Tab') {
@@ -76,7 +76,7 @@ editor.addEventListener('keydown', function(event) {
         const end = this.selectionEnd;
 
         // Set textarea value to: text before caret + tab + text after caret
-        this.value = this.value.substring(0, start) + '\t' + this.value.substring(end);
+        this.value = this.value.substring(0, start) + tab + this.value.substring(end);
 
         // Move the caret
         this.selectionStart = this.selectionEnd = start + 1;
