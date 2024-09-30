@@ -1,8 +1,9 @@
 function translate(input) {
   //this function translates each line of code individually
-  input.trimStart()
+  
+  trimmedInput=input.trimStart()
   Operators = ["Increase", "Subtract", "Divide", "Multiply"]
-  parts = input.split(" ")
+  parts = trimmedInput.split(" ")
   //split line into parts seperated by spaces
 
   if (parts[0] === "Set") {
