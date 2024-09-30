@@ -94,6 +94,6 @@ function translate(input) {
   } else if (parts[0]=="End"){
     return "}"
   }else {
-    return input
+    return trimmedInput
   }
 }
