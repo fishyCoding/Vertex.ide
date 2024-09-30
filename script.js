@@ -67,6 +67,7 @@ updateLineNumbers()
 // The translate function to convert Vertex to JavaScript
 function translate(input) {
   //this function translates each line of code individually
+  input.trimStart()
   Operators = ["Increase", "Subtract", "Divide", "Multiply"]
   parts = input.split(" ")
   //split line into parts seperated by spaces
