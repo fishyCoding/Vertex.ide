@@ -97,11 +97,11 @@ function translate(input) {
     return "return "+parts[1]
   } else if (parts[0]=="Terminate"){
         let base ='break'
-        if (parts.length=1) {
+        if (parts.length==1) {
             return base
         } else{
             if (parts[1]=='when'){
-                return 'if ('+parts[2]+') '+break
+                return 'if ('+parts[2]+') '+base
             }
         }
   } else if (parts[0]=="Skip"){
