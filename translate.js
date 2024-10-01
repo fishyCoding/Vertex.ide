@@ -96,14 +96,24 @@ function translate(input) {
   } else if (parts[0]=="Return"){
     return "return "+parts[1]
   } else if (parts[0]=="Terminate"){
-    return "break"
+        let base ='break'
+        if (parts.length=1) {
+            return base
+        } else{
+            if (parts[1]=='when'){
+                return 'if ('+parts[2]+') '+break
+            }
+        }
   } else if (parts[0]=="Skip"){
     return "continue"
   } else if (parts[0]=="If" && parts[2]=="is" && parts[3]=="equal..."){
       return "switch ("+parts[1]+") {"
   } else if (parts[0]=="To"){
       return "case "+parts[1]+":"
+  } else if (parts[0]=="While"){
+      return "while("+parts[1]+") {"
   }
+
   
   else {
     return trimmedInput
