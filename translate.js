@@ -105,7 +105,14 @@ function translate(input) {
             }
         }
   } else if (parts[0]=="Skip"){
-    return "continue"
+        let base ='continue'
+        if (parts.length==1) {
+            return base
+        } else{
+            if (parts[1]=='when'){
+                return 'if ('+parts[2]+') '+base
+            }
+        }
   } else if (parts[0]=="If" && parts[2]=="is" && parts[3]=="equal..."){
       return "switch ("+parts[1]+") {"
   } else if (parts[0]=="To"){
