@@ -39,6 +39,8 @@ button#run-btn:hover {
 .editor-container {
     display: flex;
     position: relative;
+    height: 200px;
+    
 }
 
 #editor {
@@ -86,10 +88,7 @@ pre#output {
 }
 
 /* Synchronizing scroll */
-.editor-container {
-    position: relative;
-    height: 200px;
-}
+
 
 #editor, #line-numbers {
     height: 100%;
@@ -104,3 +103,81 @@ pre#output {
     background-color: #555;
     border-radius: 5px;
 }
+/* Button Container */
+.button-container {
+    display: flex;
+    margin-top: 10px;
+    gap: 10px
+}
+
+
+/* Documentation Button */
+button#doc-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #555; /* Match run button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 12px; /* Decreased font size */
+}
+
+button#doc-btn:hover {
+    background-color: #666; /* Match hover state with run button */
+}
+
+/* Documentation Panel */
+.doc-panel {
+    position: fixed; /* Make it fixed to the right */
+    top: 0;
+    right: -400px; /* Start off-screen */
+    width: 400px;
+    height: 100vh; /* Full height */
+    background-color: #2e2e2e;
+    color: white;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.3s; /* Smooth transition */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.doc-panel h2 {
+    margin-top: 0;
+}
+
+button#close-doc-btn {
+    background: none; /* No background for close button */
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Show the documentation panel */
+.doc-panel.active {
+    right: 0; /* Bring into view */
+}
+
+.doc-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e;
+    color: white;
+    padding: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+#close-doc-btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
