@@ -1,1 +1,65 @@
-Vertex is great
+Vertex Documentation
+
+Overview
+Vertex is a simple coding language designed for ease of use and readability. This documentation provides a basic guide on how to use Vertex and its key features.
+
+Basic Syntax
+Comments: Use `//` for single-line comments.
+Variables: Variables can be created using the `Set` command.
+    - Example: `Set x to 5` translates to `let x = 5`.
+
+Operators
+Increase: `Increase x by 2` translates to `x += 2`.
+Subtract: `Subtract 1 from x` translates to `x -= 1`.
+Multiply: `Multiply x by 3` translates to `x *= 3`.
+Divide: `Divide x by 4` translates to `x /= 4`.
+
+Logging
+- To output values to the console, use the `Log` command.
+    - Example: `Log x` translates to `console.log(x)`.
+
+Loops
+  For Loop
+    Basic For Loop: 
+      Example: Loop 10 times` translates to `for (let i = 0; i < 10; i++) { ... }.
+  For Each Loop**: 
+      Example: Loop through items translates to for (item of items) { ... }.
+
+While Loop
+      Example: While x is less than 10` translates to `while (x < 10) { ... }.
+
+### Breaking Loops
+- **Breaking Out of a Loop**: 
+    - Use `Terminate` to exit a loop.
+    - Example: `Terminate when x is greater than 10` translates to `if (x > 10) break;`.
+
+## Functions
+### Defining Functions
+- Use the `Define function` command to create a function.
+    - Example: `Define function greet with inputs: name` translates to `function greet(name) { ... }`.
+
+### Returning Values
+- Use the `Return` command to return a value from a function.
+    - Example: `Return x` translates to `return x;`.
+
+## Conditionals
+- **If Statement**: 
+    - Example: `if x is greater than 5` translates to `if (x > 5) { ... }`.
+- **Else If Statement**: 
+    - Example: `else if x is less than 2` translates to `else if (x < 2) { ... }`.
+- **Else Statement**: 
+    - Example: `else` translates to `else { ... }`.
+
+## Switch Statements
+- **Switch Statement**: 
+    - Example: `If x is equal to 1` translates to `switch (x) { case 1: ... }`.
+
+## Summary
+Vertex is designed to be straightforward and intuitive, making it easy to learn for beginners while still being powerful enough for more advanced users.
+
+For more information or help, feel free to reach out to the Vertex community!
+"""
+
+# Saving the expanded documentation content to a text file.
+with open('/mnt/data/vertex_documentation_expanded.txt', 'w') as doc_file:
+    doc_file.write(vertex_documentation_content)
