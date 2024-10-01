@@ -163,7 +163,7 @@ button#close-doc-btn {
     position: fixed;
     top: 0;
     right: 0;
-    width: 90%;
+    width: 80%;
     height: 100%;
     background-color: #1e1e1e;
     color: white;
@@ -175,6 +175,7 @@ button#close-doc-btn {
 
 #close-doc-btn {
     background-color: #555;
+    position: sticky
     color: white;
     border: none;
     padding: 5px 10px;
