@@ -22,3 +22,21 @@ function arrayIntersection(arr1, arr2) {
 function isPerfectSquare(num) {
     return Number.isInteger(Math.sqrt(num));
 }
+function findMax(arr) {
+    return Math.max(...arr);
+}
+function findMin(arr) {
+    return Math.min(...arr);
+}
+function average(arr) {
+    return arr.reduce((sum, value) => sum + value, 0) / arr.length;
+}
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+function trimString(str) {
+    return str.trim();
+}
+function isInRange(num, min, max) {
+    return num >= min && num <= max;
+}
