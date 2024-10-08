@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
     docContainer.style.display = "none" // Hide the documentation panel
   })
 })
-
 document.getElementById("run-btn").addEventListener("click", function () {
   const editor = document.getElementById("editor")
   const outputElement = document.getElementById("output")
