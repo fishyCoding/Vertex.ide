@@ -1,33 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const docButton = document.getElementById('doc-btn');
-    const docContainer = document.getElementById('doc-container');
-    const closeDocButton = document.getElementById('close-doc-btn');
-    const docContent = document.getElementById('doc-content');
+document.addEventListener("DOMContentLoaded", () => {
+  const docButton = document.getElementById("doc-btn")
+  const docContainer = document.getElementById("doc-container")
+  const closeDocButton = document.getElementById("close-doc-btn")
+  const docContent = document.getElementById("doc-content")
 
-    docButton.addEventListener('click', async () => {
-        try {
-            // Use the correct raw URL
-            const response = await fetch('https://raw.githubusercontent.com/fishyCoding/Vertex.ide/main/documentation.txt');
+  docButton.addEventListener("click", async () => {
+    docContainer.style.display = "block" // Show the documentation panel
+  })
+  closeDocButton.addEventListener("click", () => {
+    docContainer.style.display = "none" // Hide the documentation panel
+  })
+})
 
-            // Check if the response is ok (status 200)
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-
-            const data = await response.text();
-
-            // Display the documentation
-            docContent.textContent = data;
-            docContainer.style.display = 'block'; // Show the documentation panel
-        } catch (error) {
-            console.error('Error fetching documentation:', error);
-        }
-    });
-
-    closeDocButton.addEventListener('click', () => {
-        docContainer.style.display = 'none'; // Hide the documentation panel
-    });
-});
 document.getElementById("run-btn").addEventListener("click", function () {
   const editor = document.getElementById("editor")
   const outputElement = document.getElementById("output")
