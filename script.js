@@ -35,7 +35,7 @@ document.getElementById("run-btn").addEventListener("click", function () {
     for (let i = 0; i < vertexList.length; i++) {
       //Translates line for line and combines code into one string
 
-      line = vertexList[i]
+      let line = vertexList[i]
       console.log(translate(line.toString()).toString() + "\n")
       translatedCode += translate(line.toString()).toString() + "\n"
     }
@@ -52,6 +52,36 @@ document.getElementById("run-btn").addEventListener("click", function () {
     outputElement.textContent = "Error: " + error.message 
   }
 })
+
+
+
+document.getElementById("translate-btn").addEventListener("click", function () {
+  const editor = document.getElementById("editor")
+  const outputElement = document.getElementById("output")
+
+  // Clear previous output
+  outputElement.textContent = ""
+
+  // Create a custom console.log function to capture logs
+  let consoleOutput = ""
+  const vertexList = editor.value.split("\n")
+  let line=''
+    for (let i = 0; i < vertexList.length; i++) {
+      //Translates line for line and combines code into one string
+
+      line = vertexList[i]
+      consoleOutput += (i+1).toString()+"). "+translate(line.toString()).toString() + "\n"
+    }
+
+    if(consoleOutput.length<6){
+          outputElement.textContent = "No output."
+
+    }else{
+      outputElement.textContent = consoleOutput
+    }
+})
+
+
 
 // Line Numbers
 const editor = document.getElementById("editor")
@@ -98,5 +128,3 @@ editor.addEventListener('keydown', function(event) {
         updateLineNumbers();
     }
 });
-
-
