@@ -30,7 +30,26 @@ button#run-btn {
     cursor: pointer;
     font-size: 16px;
 }
-
+button#translate-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button#download-btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
 button#run-btn:hover {
     background-color: #666;
 }
@@ -120,7 +139,7 @@ button#doc-btn {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 12px; /* Decreased font size */
+    font-size: 16px; /* Decreased font size */
 }
 
 button#doc-btn:hover {
@@ -181,4 +200,3 @@ button#close-doc-btn {
     padding: 5px 10px;
     cursor: pointer;
 }
-
